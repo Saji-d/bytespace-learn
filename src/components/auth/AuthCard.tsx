@@ -22,7 +22,7 @@ export function AuthCard({ eyebrow, title, titleId, note, footer, children }: Au
       <h2 id={titleId} className="font-heading text-[2rem] leading-[1.2] font-semibold tracking-heading sm:text-heading-m">
         {title}
       </h2>
-      {note && <p className="mt-3 text-body-m text-neutral-600">{note}</p>}
+      {note}
       <div className="mt-8 lg:mt-[38px]">{children}</div>
       <p className="mt-10 text-center text-body-m text-neutral-500 lg:mt-auto lg:pt-10">{footer}</p>
     </section>

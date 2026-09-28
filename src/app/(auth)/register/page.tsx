@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { AuthCard } from "@/components/auth/AuthCard";
 import { AuthIntro } from "@/components/auth/AuthIntro";
+import { EnrollingCourseNote } from "@/components/auth/EnrollingCourseNote";
 import { RegisterForm } from "@/components/auth/RegisterForm";
-import { courses } from "@/data/courses";
 import { authNav } from "@/data/navigation";
 
 export const metadata: Metadata = {
@@ -13,14 +14,7 @@ export const metadata: Metadata = {
 
 const titleId = "register-title";
 
-type RegisterPageProps = {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-};
-
-export default async function RegisterPage({ searchParams }: RegisterPageProps) {
-  const { course: slug } = await searchParams;
-  const course = typeof slug === "string" ? courses.find((c) => c.slug === slug) : undefined;
-
+export default function RegisterPage() {
   return (
     <>
       <AuthIntro
@@ -37,11 +31,9 @@ export default async function RegisterPage({ searchParams }: RegisterPageProps) 
         }
         titleId={titleId}
         note={
-          course && (
-            <>
-              You&apos;re enrolling in <strong className="font-medium">{course.title}</strong>
-            </>
-          )
+          <Suspense fallback={null}>
+            <EnrollingCourseNote />
+          </Suspense>
         }
         footer={
           <>
