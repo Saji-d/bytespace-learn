@@ -19,7 +19,7 @@ export default function RegisterPage() {
     <>
       <AuthIntro
         title="Sign up and come in"
-        description="The registration process is straightforward, uncomplicated, and efficient, allowing users to sign up quickly, easily, and at no cost."
+        description="The registration process is straightforward, uncomplicated, and efficient, allowing users to sign up quickly, easily, and at no cost"
       />
       <AuthCard
         eyebrow="Create an Account"

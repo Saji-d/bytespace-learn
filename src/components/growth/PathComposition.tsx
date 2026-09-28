@@ -17,7 +17,10 @@ export function PathComposition({ className }: { className?: string }) {
         className,
       )}
     >
-      <CourseCard course={courses[0]} className="absolute top-0 left-0 w-[373px]" />
+      {/* Illustrative copy of a card already listed in the course grid: keep it out of the tab order and outline. */}
+      <div inert className="absolute top-0 left-0 w-[373px]">
+        <CourseCard course={courses[0]} />
+      </div>
       <Image
         src="/images/people/student-laptop.webp"
         alt="Smiling student with headphones holding a laptop"
