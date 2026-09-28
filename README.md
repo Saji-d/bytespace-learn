@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ByteSpace — Frontend Assessment
 
-## Getting Started
+A responsive implementation of the **ByteSpace** landing page (plus bonus Login and Register pages), built from the provided Figma design for the Doin Tech Limited Jr. Software Engineer (Frontend) assessment.
 
-First, run the development server:
+## Tech stack
+
+- [Next.js 16](https://nextjs.org/) (App Router, React Server Components, Turbopack)
+- React 19 + TypeScript (strict)
+- Tailwind CSS v4 (CSS-first `@theme` design tokens)
+- `next/font` (Poppins from Google Fonts, Satoshi self-hosted from Fontshare) and `next/image`
+
+No UI kits or runtime dependencies beyond Next.js/React.
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Other scripts:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build    # production build
+npm run start    # serve the production build
+npm run lint     # ESLint (next/core-web-vitals + TypeScript)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+No environment variables are required.
 
-## Learn More
+## Routes
 
-To learn more about Next.js, take a look at the following resources:
+| Route       | Description                                           |
+| ----------- | ----------------------------------------------------- |
+| `/`         | Landing page                                          |
+| `/login`    | Sign in page (client-side validation, bonus)          |
+| `/register` | Create account page (client-side validation, bonus)   |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+  app/                 routes, root layout, global styles & design tokens
+    (auth)/            login + register pages sharing an auth layout
+  components/
+    layout/            header, mobile navigation, footer, newsletter form
+    sections/          one component per landing-page section
+    course/            course card, topic filter, course grid
+    cards/             floating stat cards used across sections
+    auth/, forms/      auth shell and reusable form fields
+    ui/                primitives: Container, Button, Logo, Decor, AvatarStack…
+    icons.tsx          SVG icons exported from the Figma file
+  data/                page content (courses, navigation, testimonials…)
+  fonts/               self-hosted Satoshi (with licence)
+  lib/                 small utilities (class names, validation)
+public/images/         optimised WebP assets exported from Figma
+```
 
-## Deploy on Vercel
+## Implementation notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Design fidelity** — colours, type scale, radii and the 12-column / 1200px grid come straight from the Figma style guide and are exposed as Tailwind tokens in `src/app/globals.css`. Photography, 3D ornaments and icons are the original Figma assets (exported and converted to WebP / inline SVG).
+- **Responsive** — the design is desktop-only (1440px); tablet and mobile layouts were designed to keep the same visual language (stacked columns, scaled typography, a mobile navigation menu, trimmed decorations).
+- **Functionality** — the hero search and topic chips filter the course grid (`/?q=…#courses`), navigation links scroll to sections, and the newsletter / auth forms validate input accessibly. There is no backend, so form submissions are simulated.
+- **Accessibility** — semantic landmarks and headings, labelled form controls with inline errors, visible focus styles, keyboard-operable menu and filters, and `prefers-reduced-motion` support.
+- **Performance** — pages are statically prerendered; only small interactive islands (mobile menu, filters, forms) ship client JavaScript; images are responsive and lazy-loaded below the fold.
