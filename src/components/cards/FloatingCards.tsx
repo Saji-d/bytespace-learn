@@ -25,7 +25,7 @@ export function CategoryStatCard({
   return (
     <div className={cn(cardBase, "w-max pb-[17px]", className)}>
       <p className="text-body-m leading-[1.3]">{title}</p>
-      <p className="mt-px flex items-center gap-2.5 text-body-xs leading-[1.3] text-neutral-400">
+      <p className="mt-px flex items-center gap-2.5 text-body-xs leading-[1.3] text-neutral-500">
         <span>{courses}</span>
         <span aria-hidden="true" className="size-[3px] rounded-full bg-current" />
         <span>{students}</span>
@@ -73,7 +73,7 @@ export function HappyStudentsCard({
       <p className="text-body-m leading-[1.3]">Happy Students</p>
       <p className="mt-px flex items-center gap-0.5 text-body-xs leading-[1.3]">
         <span>
-          4.5 <span className="text-neutral-400">(240)</span>
+          4.5 <span className="text-neutral-500">(240)</span>
           <span className="sr-only"> average rating from 240 reviews</span>
         </span>
         <StarIcon

@@ -66,7 +66,7 @@ export function CourseBrowser({ topicSlug, query = "" }: CourseBrowserProps) {
       </p>
 
       {term && (
-        <p className="mt-10 text-center text-body-m text-neutral-400 lg:-mb-6">
+        <p className="mt-10 text-center text-body-m text-neutral-500 lg:-mb-6">
           Showing results for <span className="text-neutral-950">“{term}”</span>
           <span aria-hidden="true"> · </span>
           <button
@@ -86,7 +86,7 @@ export function CourseBrowser({ topicSlug, query = "" }: CourseBrowserProps) {
           <h3 className="text-heading-xs text-ink">
             {term ? `No courses match “${term}”` : `No ${topic.label} courses yet`}
           </h3>
-          <p className="mt-3 max-w-[440px] text-body-m text-neutral-400">
+          <p className="mt-3 max-w-[440px] text-body-m text-neutral-500">
             New classes are added every week. In the meantime, browse our featured courses.
           </p>
           <Button onClick={resetFilters} className="mt-6">

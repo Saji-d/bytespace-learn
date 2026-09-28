@@ -19,7 +19,7 @@ export function CourseDiscovery() {
             Discover Your Passion, <br className="max-sm:hidden" />
             Build Your Skills
           </h2>
-          <p className="mt-4 text-body-m text-neutral-400 sm:text-body-l lg:mt-[17px]">
+          <p className="mt-4 text-body-m text-neutral-500 sm:text-body-l lg:mt-[17px]">
             At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety
             of courses across different fields, from technology to the arts, and make a difference
             in your career and life.

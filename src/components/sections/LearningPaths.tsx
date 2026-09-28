@@ -55,7 +55,7 @@ export function LearningPaths() {
           >
             Explore Diverse Learning Paths at Bytespace
           </h2>
-          <p className="mt-4 text-body-m text-neutral-400 sm:text-body-l lg:mt-[14px]">
+          <p className="mt-4 text-body-m text-neutral-500 sm:text-body-l lg:mt-[14px]">
             At Bytespace, we believe in empowering individuals through knowledge. Our diverse range
             of courses spans various fields, ensuring there&apos;s something for everyone. Unleash
             your potential and explore our carefully curated categories.
