@@ -82,7 +82,7 @@
     @apply bg-white font-sans text-neutral-950 antialiased;
   }
 
-  :where(h1, h2, h3, h4) {
+  h1, h2, h3, h4 {
     @apply font-heading font-semibold tracking-heading;
   }
 
