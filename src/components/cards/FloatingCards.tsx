@@ -11,6 +11,29 @@ import { cn } from "@/lib/cn";
 
 const cardBase = "rounded-2xl bg-white p-4 text-neutral-950 backdrop-blur-[10px]";
 
+export function CategoryStatCard({
+  title = "UI/UX Design",
+  courses = "200 Courses",
+  students = "1000+ Students",
+  className,
+}: {
+  title?: string;
+  courses?: string;
+  students?: string;
+  className?: string;
+}) {
+  return (
+    <div className={cn(cardBase, "w-max pb-[17px]", className)}>
+      <p className="text-body-m leading-[1.3]">{title}</p>
+      <p className="mt-px flex items-center gap-2.5 text-body-xs leading-[1.3] text-neutral-400">
+        <span>{courses}</span>
+        <span aria-hidden="true" className="size-[3px] rounded-full bg-current" />
+        <span>{students}</span>
+      </p>
+    </div>
+  );
+}
+
 export function LearningProgressCard({
   value = 55,
   className,
@@ -21,7 +44,7 @@ export function LearningProgressCard({
   return (
     <div className={cn(cardBase, "w-[232px]", className)}>
       <p className="text-body-s leading-[1.3]">Learning Progress</p>
-      <p className="mt-1.5 font-heading text-[48px] leading-[1.2] font-semibold tracking-heading">
+      <p className="mt-[7px] font-heading text-[48px] leading-[1.2] font-semibold tracking-heading">
         {value}%
       </p>
       <div
@@ -46,16 +69,9 @@ export function HappyStudentsCard({
   tone?: "white" | "lime";
 }) {
   return (
-    <div
-      className={cn(
-        cardBase,
-        "w-[258px]",
-        tone === "lime" && "bg-lime-400",
-        className,
-      )}
-    >
+    <div className={cn(cardBase, "w-[258px]", tone === "lime" && "bg-lime-400", className)}>
       <p className="text-body-m leading-[1.3]">Happy Students</p>
-      <p className="mt-0.5 flex items-center gap-1 text-body-xs leading-[1.3]">
+      <p className="mt-px flex items-center gap-0.5 text-body-xs leading-[1.3]">
         <span>
           4.5 <span className="text-neutral-400">(240)</span>
           <span className="sr-only"> average rating from 240 reviews</span>
@@ -69,7 +85,7 @@ export function HappyStudentsCard({
         avatars={happyStudents}
         extra="2K+"
         label="Over 2,000 happy students"
-        className="mt-3"
+        className="mt-[9px]"
         extraClassName={tone === "lime" ? "bg-neutral-950 text-white" : undefined}
       />
     </div>

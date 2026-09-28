@@ -6,16 +6,19 @@ import { authNav, primaryNav, sectionIds } from "@/data/navigation";
 import { MobileNav } from "./MobileNav";
 
 const linkStyles =
-  "rounded-md text-body-m leading-[1.3] text-neutral-50 transition-opacity hover:opacity-75";
+  "rounded-md text-body-m leading-[1.3] text-neutral-50 transition-opacity hover:opacity-75 aria-[current=page]:font-medium";
 
 /** Transparent header that sits on top of the blue hero. */
 export function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
       <Container className="flex h-[104px] items-center justify-between lg:relative">
-        <Logo />
+        <Logo className="lg:ml-0.5" />
 
-        <nav aria-label="Main" className="hidden lg:absolute lg:left-1/2 lg:block lg:-translate-x-1/2">
+        <nav
+          aria-label="Main"
+          className="hidden lg:absolute lg:top-1/2 lg:left-1/2 lg:mt-1.5 lg:block lg:-translate-1/2"
+        >
           <ul className="flex items-center gap-6">
             {primaryNav.map((link, index) => (
               <li key={link.href}>
@@ -31,7 +34,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="hidden items-center gap-6 lg:mt-3 lg:flex">
           <Link href={authNav.signIn.href} className={linkStyles}>
             {authNav.signIn.label}
           </Link>
@@ -41,7 +44,7 @@ export function Header() {
           <Link
             href={`/#${sectionIds.courses}`}
             aria-label="Your bag — browse courses"
-            className="ml-1 rounded-md p-1 text-neutral-50 transition-opacity hover:opacity-75"
+            className="rounded-md p-1 text-neutral-50 transition-opacity hover:opacity-75"
           >
             <BagIcon className="h-5 w-4" />
           </Link>

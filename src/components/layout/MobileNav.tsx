@@ -64,10 +64,18 @@ export function MobileNav() {
           ))}
         </ul>
         <div className="mt-4 grid grid-cols-2 gap-3 border-t border-neutral-100 pt-5">
-          <Link href={authNav.signIn.href} onClick={close} className={buttonStyles("outline", "w-full")}>
+          <Link
+            href={authNav.signIn.href}
+            onClick={close}
+            className={buttonStyles("outline", "w-full")}
+          >
             {authNav.signIn.label}
           </Link>
-          <Link href={authNav.join.href} onClick={close} className={buttonStyles("primary", "w-full")}>
+          <Link
+            href={authNav.join.href}
+            onClick={close}
+            className={buttonStyles("primary", "w-full")}
+          >
             {authNav.join.label}
           </Link>
         </div>
