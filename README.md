@@ -19,8 +19,10 @@
 <img src="https://img.shields.io/badge/Vercel-0B0E1A?style=flat-square&logo=vercel&logoColor=8B7CF6" alt="Vercel">
 </p>
 
+> Built as a technical assessment. Independent implementation, not affiliated with or endorsed by any company.
+
 <p>
-<a href="#-overview">Overview</a> · <a href="#-highlights">Highlights</a> · <a href="#-preview">Preview</a> · <a href="#-architecture">Architecture</a> · <a href="#-tech-stack">Tech Stack</a> · <a href="#-getting-started">Getting Started</a> · <a href="#-project-structure">Structure</a> · <a href="#-roadmap">Roadmap</a> · <a href="#-author">Author</a>
+<a href="#-overview">Overview</a> · <a href="#-highlights">Highlights</a> · <a href="#-preview">Preview</a> · <a href="#-architecture">Architecture</a> · <a href="#-tech-stack">Tech Stack</a> · <a href="#-getting-started">Getting Started</a> · <a href="#-project-structure">Structure</a> · <a href="#-assessment">Assessment</a> · <a href="#-author">Author</a>
 </p>
 
 </div>
@@ -29,7 +31,7 @@
 
 ## ◈ Overview
 
-ByteSpace is a course-platform landing page rebuilt from a 1440px Figma design. It was my final project for the Junior Software Engineer (Frontend) assessment at Doin Tech Limited.
+ByteSpace is a course-platform landing page rebuilt from a 1440px Figma design. It was my final project for a Junior Software Engineer (Frontend) technical assessment.
 
 The page covers the hero with course search, partner logos, course discovery with topic filtering, learning-path categories, a two-part growth section, a creator call to action, testimonials and a footer. I also added login and register pages as a bonus, plus a branded 404.
 
@@ -177,8 +179,10 @@ npm run lint     # ESLint
 
 ## ◈ Project Structure
 
+Pages and components live in `src/app` and `src/components`, typed content in `src/data`, helpers in `src/lib` and Figma exports in `public/images`.
+
 <details>
-<summary><strong>Show the tree</strong></summary>
+<summary>Open the folder map</summary>
 
 ```text
 src/
@@ -208,14 +212,7 @@ public/images/            # optimised Figma exports
 
 <img src="assets/divider.svg" width="100%" alt="">
 
-## ◈ Roadmap
-
-- [x] Full landing page recreated from the Figma file
-- [x] Bonus login and register pages with client-side validation
-- [x] Public Vercel deployment
-- [ ] Connect courses and forms to a real backend
-- [ ] Real authentication in place of the demo sign-in UI
-- [ ] Automated tests and visual regression checks
+## ◈ Assessment
 
 <details>
 <summary><strong>Assessment checklist</strong></summary>
@@ -236,13 +233,14 @@ public/images/            # optimised Figma exports
 
 ## ◈ Author
 
-**Sajidur Rahman Sajid**: Full-Stack Developer and AI engineer from Dhaka.
+**Sajidur Rahman Sajid**: Full-Stack Developer and AI engineer from Dhaka.<br>
+BSc in CSE at American International University-Bangladesh (AIUB).
 
 <p>
-<a href="https://www.sajidur.me"><img src="https://img.shields.io/badge/Portfolio-0B0E1A?style=for-the-badge&logo=googlechrome&logoColor=9B8CFA" alt="Portfolio"></a>
-<a href="https://www.linkedin.com/in/sajidur-rahman-sajid/"><img src="https://img.shields.io/badge/LinkedIn-0B0E1A?style=for-the-badge&logo=linkedin&logoColor=8B7CF6" alt="LinkedIn"></a>
-<a href="https://github.com/Saji-d"><img src="https://img.shields.io/badge/GitHub-0B0E1A?style=for-the-badge&logo=github&logoColor=EEF0FA" alt="GitHub"></a>
-<a href="mailto:sajidsajidurrahman99@gmail.com"><img src="https://img.shields.io/badge/Email-0B0E1A?style=for-the-badge&logo=gmail&logoColor=9B8CFA" alt="Email"></a>
+  <a href="https://www.sajidur.me"><img src="https://img.shields.io/badge/Portfolio-0B0E1A?style=flat-square&logo=googlechrome&logoColor=9B8CFA" alt="Portfolio"></a>
+  <a href="https://www.linkedin.com/in/sajidur-rahman-sajid/"><img src="https://img.shields.io/badge/LinkedIn-0B0E1A?style=flat-square&logo=linkedin&logoColor=8B7CF6" alt="LinkedIn"></a>
+  <a href="https://github.com/Saji-d"><img src="https://img.shields.io/badge/GitHub-0B0E1A?style=flat-square&logo=github&logoColor=EEF0FA" alt="GitHub"></a>
+  <a href="mailto:sajidsajidurrahman99@gmail.com"><img src="https://img.shields.io/badge/Email-0B0E1A?style=flat-square&logo=gmail&logoColor=9B8CFA" alt="Email"></a>
 </p>
 
 <sub>Built as a frontend assessment and portfolio piece.</sub>
